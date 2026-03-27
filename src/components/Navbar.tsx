@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SetmoreButton } from "./setmore-button";
 
 
@@ -39,12 +40,21 @@ const Navbar = () => {
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                {link.label}
-              </a>
+              {link.href.startsWith("/") && !link.href.includes("#") ? (
+                <Link
+                  to={link.href}
+                  className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  href={link.href}
+                  className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
           <li>
@@ -76,13 +86,23 @@ const Navbar = () => {
             <ul className="flex flex-col items-center gap-6 py-8">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {link.label}
-                  </a>
+                  {link.href.startsWith("/") && !link.href.includes("#") ? (
+                    <Link
+                      to={link.href}
+                      className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
               <li>
