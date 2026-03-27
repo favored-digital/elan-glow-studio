@@ -4,12 +4,14 @@ interface SetmoreButtonProps {
   className?: string
   variant?: "default" | "outline" | "light"
   children?: React.ReactNode
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>
 }
 
 export function SetmoreButton({
   className = "",
   variant = "default",
   children = "Book Appointment",
+  onClick,
 }: SetmoreButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer"
@@ -28,6 +30,7 @@ export function SetmoreButton({
       href={BOOKING_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={onClick}
       className={`anywhere-book-now-button ${baseStyles} ${variantStyles[variant]} ${className}`}
     >
       {children}
