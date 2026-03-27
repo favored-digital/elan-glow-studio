@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
-import { SetmoreButton } from "./setmore-button";
 
 
 const navLinks = [
@@ -48,7 +47,6 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-               <SetmoreButton></SetmoreButton>
    
            </li>
         </ul>
@@ -85,7 +83,6 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-              <SetmoreButton></SetmoreButton>
                 
          </li>
               <li>
