@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ServicesPage from "./pages/ServicesPage.tsx";
 import ReviewsPage from "./pages/ReviewsPage.tsx";
+import ContactPage from "./pages/ContactPage.tsx";
 
 const queryClient = new QueryClient();
 const routerBasename = window.location.pathname.startsWith("/elan-glow-studio")
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
