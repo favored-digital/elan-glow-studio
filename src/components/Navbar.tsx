@@ -6,10 +6,8 @@ import { SetmoreButton } from "./setmore-button";
 
 
 const navLinks = [
-  { label: "About", href: "/#aboutelan" },
   { label: "Services", href: "/services" },
   { label: "Reviews", href: "/reviews" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
