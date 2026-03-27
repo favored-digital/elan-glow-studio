@@ -23,7 +23,7 @@ const Footer = () => {
                 { label: "About", href: "/#about" },
                 { label: "Services", href: "/services" },
                 { label: "Reviews", href: "/reviews" },
-                { label: "Contact", href: "/#contact" },
+                { label: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.label}>
                   {link.href.startsWith("/") && !link.href.includes("#") ? (
