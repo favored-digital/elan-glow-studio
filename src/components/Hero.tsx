@@ -57,7 +57,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-<script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script><button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="anywhere-book-now-button" data-booking-url="https://favoreddigital.setmore.com" data-new-tab="false">Book now</button>
+<button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="anywhere-book-now-button" data-booking-url="https://favoreddigital.setmore.com" data-new-tab="false">Book now</button>
         </motion.div>
       </div>
 
@@ -75,6 +75,8 @@ const Hero = () => {
         />
       </motion.div>
     </section>
+    <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
+
   );
 };
 
