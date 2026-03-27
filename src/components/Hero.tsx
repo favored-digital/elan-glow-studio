@@ -35,10 +35,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="heading-display text-primary-foreground mb-6"
         >
-     Elan SkinCare
-     <br>
-     Demo Site Only
-     </br>
+          Elan SkinCare
+          <span className="block">Demo Site Only</span>
         </motion.h1>
 
         <motion.div
@@ -62,9 +60,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-                    <SetmoreButton></SetmoreButton>
-
-    </motion.div>
+          <SetmoreButton />
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
