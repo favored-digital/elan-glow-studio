@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-background">
+    <section id="aboutelan" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
         <ScrollReveal>
           <div className="overflow-hidden rounded-sm">

@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-secondary">
+    <section id="contactelan" className="section-padding bg-secondary">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
