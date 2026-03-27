@@ -3,6 +3,7 @@ import facialImg from "@/assets/service-facial.jpg";
 import kbeautyImg from "@/assets/service-kbeauty.jpg";
 import scalpImg from "@/assets/service-scalp.jpg";
 import { motion } from "framer-motion";
+import { SetmoreButton } from "./setmore-button";
 
 const services = [
   {
@@ -67,7 +68,10 @@ const Services = () => {
                   <p className="text-body text-muted-foreground text-sm leading-relaxed mb-6">
                     {service.description}
                   </p>
- </div>
+                  <SetmoreButton variant="outline" className="w-full justify-center uppercase">
+                    Book Now
+                  </SetmoreButton>
+                </div>
               </motion.div>
             </ScrollReveal>
           ))}

@@ -1,40 +1,18 @@
-"use client"
-
-import { useEffect } from "react"
-
-const SCRIPT_ID = "anywhere_book_now_script"
-const SCRIPT_SRC =
-  "https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"
+const BOOKING_URL = "https://favoreddigital.setmore.com"
 
 interface SetmoreButtonProps {
   className?: string
   variant?: "default" | "outline" | "light"
   children?: React.ReactNode
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>
 }
 
 export function SetmoreButton({
   className = "",
   variant = "default",
   children = "Book Appointment",
+  onClick,
 }: SetmoreButtonProps) {
-  useEffect(() => {
-    const existingScript = document.getElementById(SCRIPT_ID)
-    if (existingScript) {
-      existingScript.remove()
-    }
-
-    const script = document.createElement("script")
-    script.id = SCRIPT_ID
-    script.type = "text/javascript"
-    script.src = SCRIPT_SRC
-    script.async = true
-    document.body.appendChild(script)
-
-    return () => {
-      script.remove()
-    }
-  }, [])
-
   const baseStyles =
     "inline-flex items-center justify-center text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer"
 
@@ -48,14 +26,14 @@ export function SetmoreButton({
   }
 
   return (
-    <button
-      type="button"
-      id="Anywhere_button_iframe"
+    <a
+      href={BOOKING_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={onClick}
       className={`anywhere-book-now-button ${baseStyles} ${variantStyles[variant]} ${className}`}
-      data-booking-url="https://favoreddigital.setmore.com"
-      data-new-tab="false"
     >
       {children}
-    </button>
+    </a>
   )
 }
