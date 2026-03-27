@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-skincare.jpg";
+import { SetmoreButton } from "./setmore-button";
 
 
 const Hero = () => {
@@ -58,14 +59,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          <button
-            id="Anywhere_button_iframe_services"
-            className="anywhere-book-now-button bg-[#2C2826] text-[#FAF8F5] px-10 py-4 text-sm tracking-widest hover:bg-[#8B7355] transition-all duration-500 font-medium"
-            data-booking-url="https://favoreddigital.setmore.com"
-            data-new-tab="false"
-          >
-            BOOK YOUR TREATMENT
-          </button>        </motion.div>
+                    <SetmoreButton></SetmoreButton>
+
+    </motion.div>
       </div>
 
       {/* Scroll indicator */}

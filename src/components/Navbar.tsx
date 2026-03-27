@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import { SetmoreButton } from "./setmore-button";
 
 
 const navLinks = [
@@ -47,14 +48,9 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-          <button
-            id="Anywhere_button_iframe_services"
-            className="anywhere-book-now-button bg-[#2C2826] text-[#FAF8F5] px-10 py-4 text-sm tracking-widest hover:bg-[#8B7355] transition-all duration-500 font-medium"
-            data-booking-url="https://favoreddigital.setmore.com"
-            data-new-tab="false"
-          >
-            BOOK YOUR TREATMENT
-          </button>          </li>
+               <SetmoreButton></SetmoreButton>
+   
+           </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -89,14 +85,9 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-          <button
-            id="Anywhere_button_iframe_services"
-            className="anywhere-book-now-button bg-[#2C2826] text-[#FAF8F5] px-10 py-4 text-sm tracking-widest hover:bg-[#8B7355] transition-all duration-500 font-medium"
-            data-booking-url="https://favoreddigital.setmore.com"
-            data-new-tab="false"
-          >
-            BOOK YOUR TREATMENT
-          </button>              </li>
+              <SetmoreButton></SetmoreButton>
+                
+         </li>
               <li>
                 <a href="tel:2133853526" className="flex items-center gap-2 text-muted-foreground text-sm">
                   <Phone size={14} /> (213) 385-3526
