@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ServicesPage from "./pages/ServicesPage.tsx";
 import ReviewsPage from "./pages/ReviewsPage.tsx";
+import ContactPage from "./pages/ContactPage.tsx";
 
 const queryClient = new QueryClient();
 const routerBasename = window.location.pathname.startsWith("/elan-glow-studio")
