@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import { SetmoreButton } from "./setmore-button";
 
 
 const navLinks = [
@@ -47,8 +48,10 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-   
-           </li>
+            <SetmoreButton variant="outline" className="text-xs uppercase">
+              Book Now
+            </SetmoreButton>
+          </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -83,8 +86,10 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                
-         </li>
+                <SetmoreButton className="text-xs uppercase" onClick={() => setMobileOpen(false)}>
+                  Book Now
+                </SetmoreButton>
+              </li>
               <li>
                 <a href="tel:2133853526" className="flex items-center gap-2 text-muted-foreground text-sm">
                   <Phone size={14} /> (213) 385-3526
