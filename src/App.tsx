@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ServicesPage from "./pages/ServicesPage.tsx";
+import ReviewsPage from "./pages/ReviewsPage.tsx";
 
 const queryClient = new QueryClient();
 const routerBasename = window.location.pathname.startsWith("/elan-glow-studio")
@@ -19,6 +21,8 @@ const App = () => (
       <BrowserRouter basename={routerBasename}>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
