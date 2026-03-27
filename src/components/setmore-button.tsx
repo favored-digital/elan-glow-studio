@@ -2,6 +2,10 @@
 
 import { useEffect } from "react"
 
+const SCRIPT_ID = "anywhere_book_now_script"
+const SCRIPT_SRC =
+  "https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"
+
 interface SetmoreButtonProps {
   className?: string
   variant?: "default" | "outline" | "light"
@@ -14,14 +18,20 @@ export function SetmoreButton({
   children = "Book Appointment",
 }: SetmoreButtonProps) {
   useEffect(() => {
-    // Load the Setmore script if not already loaded
-    if (!document.getElementById("anywhere_book_now_script")) {
-      const script = document.createElement("script")
-      script.id = "anywhere_book_now_script"
-      script.type = "text/javascript"
-      script.src =
-        "https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"
-      document.body.appendChild(script)
+    const existingScript = document.getElementById(SCRIPT_ID)
+    if (existingScript) {
+      existingScript.remove()
+    }
+
+    const script = document.createElement("script")
+    script.id = SCRIPT_ID
+    script.type = "text/javascript"
+    script.src = SCRIPT_SRC
+    script.async = true
+    document.body.appendChild(script)
+
+    return () => {
+      script.remove()
     }
   }, [])
 
@@ -39,6 +49,7 @@ export function SetmoreButton({
 
   return (
     <button
+      type="button"
       id="Anywhere_button_iframe"
       className={`anywhere-book-now-button ${baseStyles} ${variantStyles[variant]} ${className}`}
       data-booking-url="https://favoreddigital.setmore.com"
