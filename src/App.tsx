@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ServicesPage from "./pages/ServicesPage.tsx";
+import ReviewsPage from "./pages/ReviewsPage.tsx";
 
 const queryClient = new QueryClient();
 const routerBasename = window.location.pathname.startsWith("/elan-glow-studio")
