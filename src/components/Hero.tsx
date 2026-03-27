@@ -36,6 +36,9 @@ const Hero = () => {
           className="heading-display text-primary-foreground mb-6"
         >
      Elan SkinCare
+     <br>
+     Demo Site Only
+     </br>
         </motion.h1>
 
         <motion.div
